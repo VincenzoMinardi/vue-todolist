@@ -1,7 +1,8 @@
 const todo = Vue.createApp({
     data(){
     return{
-        done: false,
+        newText: '',
+        done: true,
         arrElement: [
             {
             text: 'andare al supermercato', 
@@ -35,9 +36,16 @@ const todo = Vue.createApp({
     
 },
 
-methods(){
- 
-}
+    methods:{
+    
+        addText(){
+    
+            this.arrElement.push(this.newText);
+
+        }
+    }
+
+
 });
 
 todo.mount('.root');

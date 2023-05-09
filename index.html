@@ -16,14 +16,14 @@
  <h1>Todolist</h1>
     <div class="container">
         <div class="root">
-            <input class="list" type="text">
-            <button>Aggiungi</button>
+            <input @keyup.enter="addText" class="list" type="text" v-model="newText">
+            <button @click="addText">Aggiungi</button>
             <div class="error">
                 <small>Devi inserire una task di almeno 5 caratteri</small>
             </div>
             <div class="task-container">
                 <ul v-if="arrElement.legth != 0">
-                  <li v-for="element in arrElement" class="task">
+                  <li v-for="(element, index) in arrElement" class="task">
                         {{element.text}}
                     <i class="fa fa-times"></i>
                      <hr>
