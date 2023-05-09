@@ -1,7 +1,8 @@
 const todo = Vue.createApp({
     data(){
     return{
-        newText: '',
+        newText:{ text: '', done: false},
+        
         done: true,
         arrElement: [
             {
@@ -40,7 +41,8 @@ const todo = Vue.createApp({
     
         addText(){
     
-            this.arrElement.push(this.newText);
+            this.arrElement.unshift(this.newText);
+            this.newText = '';
 
         }
     }
