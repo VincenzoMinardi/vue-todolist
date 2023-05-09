@@ -1,10 +1,10 @@
 const todo = Vue.createApp({
     data(){
     return{
-        newText:{ text: '', done: false},
         
-        done: true,
-        arrElement: [
+       newText: '', 
+    
+       arrElement: [
             {
             text: 'andare al supermercato', 
             done: false,
@@ -40,9 +40,18 @@ const todo = Vue.createApp({
     methods:{
     
         addText(){
-    
-            this.arrElement.unshift(this.newText);
-            this.newText = '';
+            let cleanedTask = this.newText.trim()
+           if(cleanedTask.leghth >= 5){
+            this.arrElement.unshift(newObj)
+            
+              let newObj = {
+                text: newText,
+                done: false
+            }
+            this.newTask = ''
+
+
+           };
 
         }
     }
