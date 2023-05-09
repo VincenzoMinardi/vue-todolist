@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>vue-todolist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="assets/script.js" defer></script>
+</head>
+
+<body>
+    <h1>Todolist</h1>
+    <div class="container">
+        <div class="root">
+            <input class="list" type="text">
+            <button>Aggiungi</button>
+            <div class="error">
+                <small>Devi inserire una task di almeno 5 caratteri</small>
+            </div>
+            <div v-for="element in arrElement" class="task-container">
+                <ul>
+                <li> {{element.supermercato}}</li>
+                    <hr>
+                
+                    <li>{{element.meccanico}}</li>
+                    <hr>
+                
+                    <li>{{element.shopping}}</li>
+                    <hr>
+                </ul>
+                <h2>Non ci sono task :)</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
