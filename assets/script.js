@@ -1,12 +1,32 @@
 const todo = Vue.createApp({
     data(){
     return{
-
+        done: false,
         arrElement: [
             {
-            supermercato: "fare la spesa",
-            meccanico: "andare dal meccanico",
-            shopping: "compare dei veestiti"  
+            text: 'andare al supermercato', 
+            done: false,
+
+        },
+        
+        {
+            text: 'andare dal meccanico',
+            done: true 
+        },
+
+        {
+            text: 'andare dal parruchiere',
+            done: false
+        },
+        
+        {
+            text: 'andare a fare shopping',
+            done: true
+        },
+
+        {
+            text: 'pulire il cane',
+            done: true
         },
                
         ],
@@ -16,7 +36,7 @@ const todo = Vue.createApp({
 },
 
 methods(){
-    
+ 
 }
 });
 
